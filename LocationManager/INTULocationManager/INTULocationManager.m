@@ -128,6 +128,7 @@ static id _sharedInstance;
     if (self) {
         _locationManager = [[CLLocationManager alloc] init];
         _locationManager.delegate = self;
+        _locationManager.pausesLocationUpdatesAutomatically = NO;
         
 #ifdef __IPHONE_8_4
 #if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_8_4
